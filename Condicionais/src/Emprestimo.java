@@ -30,16 +30,16 @@ public class Emprestimo {
 
         info.close();
 
-        if (idade >= 18 && idade <= 65) {
-            System.out.println("O empréstimo foi reprovado");
-        } else if (parcela >= 3 && parcela <= 24) {
-            System.out.println("O empréstimo foi reprovado");
-        } else if (valor <= limite) {
-            System.out.println("O empréstimo foi aprovado");
-        } else {
-            System.out.println("O empréstimo foi reprovado");
+            if(
+                    (idade >= 18 && idade <= 65) &&
+                            (parcela >= 3 && parcela <= 24) &&
+                            (valor <= limite)
+            ) {
+                System.out.println("O empréstimo foi aprovado.");
+            } else  {
+                System.out.println("O empréstimo foi reprovado.");
+            }
 
         }
     }
 
-}

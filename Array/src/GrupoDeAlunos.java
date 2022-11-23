@@ -1,22 +1,36 @@
-import java.util.Scanner;
 import java.util.Random;
 
 public class GrupoDeAlunos {
     public static void main(String[] args) {
 
+        int quantidade = args.length / 3;
+
+        String[][] grupos = new String[quantidade][3];
+
         Random group = new Random();
 
-       String names [] = {"Ana","Bianco","Mistica","Logan","Clark","Sofia"};
+        for(int i = 0; i < quantidade; i++) {
+            int alunos = 0;
+            while(alunos < 3) {
+                int sorteio = group.nextInt(0, args.length);
 
-        int select = group.nextInt(names.length());
+                if(!args[sorteio].equals("")) {
+                    grupos[i][alunos] = args[sorteio];
+                    alunos++;
+                    args[sorteio] = "";
+                }
+            }
+        }
 
-        System.out.println("Random String selected: " + names[select]);
-
-
-//        Scanner names = new Scanner(System.in);
-
+        for(String[] grupo : grupos) {
+            System.out.println("Grupo");
+            for(String aluno : grupo) {
+                System.out.println(aluno);
+            }
+        }
 
     }
 }
+
 
 
