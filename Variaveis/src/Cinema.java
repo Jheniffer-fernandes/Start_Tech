@@ -17,6 +17,7 @@ public class Cinema {
                     " lugares são reservados para PCDs");
 
             lugares.close();
+
         }
     }
 }

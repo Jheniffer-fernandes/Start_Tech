@@ -19,5 +19,4 @@ public class Termometro {
         temperatura.close();
 
     }
-
 }

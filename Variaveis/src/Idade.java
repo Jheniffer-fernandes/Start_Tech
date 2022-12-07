@@ -8,5 +8,6 @@ public class Idade {
         ano = 2022 - ano;
         System.out.println("Você tem ou vai completar " + ano + " anos");
         birthday.close();
+
     }
 }

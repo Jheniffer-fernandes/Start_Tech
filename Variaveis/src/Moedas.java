@@ -21,6 +21,5 @@ public class Moedas {
         System.out.println(f.format(euro) + " euros");
         System.out.println(f.format(franco)+ " francos franceses");
         moedas.close();
-
     }
 }
