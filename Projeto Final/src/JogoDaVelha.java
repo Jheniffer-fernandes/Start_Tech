@@ -6,12 +6,6 @@ public class JogoDaVelha {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Nome do jogador 1");
-        String player1 = input.nextLine();
-
-        System.out.println("Nome do jogador 2");
-        String player2 = input.nextLine();
-
         char[][] board = {{' ', ' ', ' '},
                 {' ', ' ', ' '},
                 {' ', ' ', ' '}};
@@ -106,32 +100,31 @@ public class JogoDaVelha {
     }
 
     private static void player1Turn(char[][] board, Scanner scanner) {
-        String userInput;
+        String input;
         while (true) {
-            System.out.println("Where would you like to play? (1-9)");
-            userInput = scanner.nextLine();
-            if (isValidMove(board, userInput)){
+            System.out.println("Escolha a posição? (1-9)");
+            input = scanner.nextLine();
+            if (isValidMove(board, input)){
                 break;
             } else {
-                System.out.println(userInput + " is not a valid move.");
+                System.out.println(input + " não é um movimento válido");
             }
         }
-        placeMove(board, userInput, 'X');
+        placeMove(board, input, 'X');
     }
 
     private static void player2turn(char[][] board, Scanner scanner) {
-        String userInput;
+        String  input;
         while (true) {
-            System.out.println("Where would you like to play? (1-9)");
-            userInput = scanner.nextLine();
-            if (isValidMove(board, userInput)){
+            System.out.println("Escolha a posição? (1-9)");
+            input = scanner.nextLine();
+            if (isValidMove(board, input)){
                 break;
             } else {
-                System.out.println(userInput + " is not a valid move.");
+                System.out.println(input + " não é um movimento válido.");
             }
         }
-        placeMove(board, userInput, 'O');
-//        placeMove(board, Integer.toString(computerMove), 'O');
+        placeMove(board, input, 'O');
     }
 
 
